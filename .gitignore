@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+*/node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+build/
+dist/
+out/
+.next/
+.nuxt/
+.cache/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.vuepress/
+.env.local
+.env.*.local
+
+# Misc
+.DS_Store
+.env
+.env.*.local
+.history/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE
+.vscode
+.idea
+*.code-workspace
+
+# OS
+Thumbs.db
+.DS_Store
