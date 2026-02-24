@@ -20,9 +20,15 @@ app.get("/health", (req, res) => {
 
 // 404 handler
 app.use((req, res) => {
-  res.status(404).json({ error: { message: "Route not found", code: "NOT_FOUND" } });
+  res
+    .status(404)
+    .json({ error: { message: "Route not found", code: "NOT_FOUND" } });
 });
 
-const PORT = process.env.PORT || 4000;
-const HOST = process.env.HOST || "localhost";
-app.listen(PORT, HOST, () => console.log(`🚀 Server running on http://${HOST}:${PORT}`));
+// Railway sets PORT automatically, default to 5000 for local development
+const PORT = process.env.PORT || 5000;
+const HOST = process.env.HOST || "0.0.0.0";
+app.listen(PORT, HOST, () => {
+  console.log(`🚀 Server running on http://${HOST}:${PORT}`);
+  console.log(`📚 API Documentation: http://${HOST}:${PORT}/customers`);
+});
